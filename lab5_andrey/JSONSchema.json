@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "properties": {
+    "personList": {
+      "type": "object",
+      "properties": {
+        "personList": {
+          "type": "object",
+          "properties": [
+            {
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "pnoneNumber": {
+                "type": "string"
+              },
+              "id": {
+                "type": "integer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "chatHistory": {
+      "type": "object",
+      "properties": {
+        "chatList": {
+          "type": "object",
+          "properties": [
+            {
+              "id": {
+                "type": "integer"
+              },
+              "messageList": {
+                "type": "object",
+                "properties": {
+                  "messageList": {
+                    "type": "object",
+                    "properties": [
+                      {
+                        "sender": {
+                          "type": "object",
+                          "properties": {
+                            "idref": {
+                              "type": "integer"
+                            }
+                          }
+                        },
+                        "receivers": {
+                          "type": "object",
+                          "properties": {
+                            "idref": {
+                              "type": "integer"
+                            }
+                          }
+                        },
+                        "time": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "content": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "integer"
+                            },
+                            "messageEncoded": {
+                              "type": "boolean"
+                            },
+                            "body": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "type": {
+                "type": "object",
+                "properties": {
+                  "aPrivate": {
+                    "type": "object",
+                    "properties": {
+                      "dateOfCreation": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
